@@ -1,0 +1,422 @@
+/* 
+ * Default Element Styles
+ * ----------------------
+ */
+
+html,
+body {
+	height: 100%;
+}
+
+body {	
+	background-color: #222;
+	background-image: radial-gradient(#444 20%, #222 60%);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+}
+
+img {
+	width: 100%;
+	height: 100%;
+}
+
+/* 
+ * Utility Classes
+ * ---------------
+ */
+.flex {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+.flex-column {
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+		 -ms-flex-direction: column;
+				 flex-direction: column;
+}
+
+.flex-grow {
+	-webkit-box-flex: 1;
+	-ms-flex-positive: 1;
+			flex-grow: 1;
+}
+
+.flex-justify-center {
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+}
+
+.flex-justify-spaceAround {
+	-ms-flex-pack: distribute;
+	justify-content: space-around;
+}
+.flex-justify-spaceBetween {
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+}
+
+.flex-align-center {
+	-webkit-box-align: center;
+		 -ms-flex-align: center;
+				align-items: center;
+}
+
+.flex-align-end {
+	-webkit-box-align: end;
+		 -ms-flex-align: end;
+				align-items: flex-end;
+}
+
+
+/* 
+ * Top Sign Styles
+ * ---------------
+ */
+
+.sign {
+	margin: 15px auto 30px;
+	padding: 4px;
+	text-align: center;
+	border: 3px solid #FFE766;
+	border-radius: 5px;
+	background-color: #800000;
+}
+
+.sign-bulbRow {
+	padding: 0 10px;
+}
+
+.sign-bulbColumn .sign-bulb:nth-of-type(odd),
+.sign-bulbRow .sign-bulb:nth-of-type(even) {
+	-webkit-animation-delay: 0.5s;
+		 -moz-animation-delay: 0.5s;
+			 -o-animation-delay: 0.5s;
+					animation-delay: 0.5s;
+}
+
+.sign-bulb {
+	width: 15px;
+ 	-webkit-animation: blink 1s linear 0s infinite;
+		 -moz-animation: blink 1s linear 0s infinite;
+			 -o-animation: blink 1s linear 0s infinite;
+					animation: blink 1s linear 0s infinite;
+	border: 1px solid transparent;
+	border-radius: 50%;
+	background-color: #333333;
+	background-image: radial-gradient(rgba(255, 255, 255, 0.6), transparent);
+}
+
+.sign-bulb::before {
+	display: block;
+	padding-top: 100%;
+	content: '';
+}
+
+.sign-titleContainer {
+	margin: 5px;
+	padding: 15px;
+	border: 1px solid #FFE766;
+	background-color: #111111;
+}
+
+.sign-title {
+	font-family: 'Vast Shadow', cursive;
+	font-size: 28px;
+	font-variant: small-caps;
+	line-height: 100%;
+	letter-spacing: 2px;
+	color: #D42D2F;
+}
+
+@media (min-width: 480px) {
+	.sign {
+		padding: 8px;
+	}
+	.sign-bulbRow {
+		padding: 0 15px;
+	}
+	.sign-bulb {
+		width: 20px;
+	}
+	.sign-titleContainer {
+		margin: 10px;
+		padding: 20px;
+	}
+	.sign-title {
+		font-size: 40px;
+	}
+}
+@media (min-width: 768px) {
+	.sign-title {
+		font-size: 55px;
+	}
+}
+
+@keyframes blink {
+	0% {
+		background-color: #ADAD5D;
+		box-shadow: 0 0 10px 3px #ADAD5D;
+	}
+	50% {
+		background-color: #F1F19B;
+		box-shadow: 0 0 15px 3px #F1F19B;
+	}
+}
+
+/* 
+ * Slot Machine Styles
+ * -------------------
+ */
+
+.slotMachine {
+	font-family: "Corben";
+	max-width: 800px;
+	margin: 0 auto 25px;
+}
+
+.slotMachine-top {
+	padding: 45px 15px 15px;
+	border-top-left-radius: 50%;
+	border-top-right-radius: 50%;
+	background: #CCCCCC;
+}
+
+.slotMachine-body {
+	padding: 15px;
+	background-color: #CCCCCC;
+}
+
+.slotMachine-title {
+	font-size: 28px;
+}
+@media screen and (min-width: 480px) {
+	.slotMachine-title {
+		font-size: 40px;
+		margin-bottom: 10px;
+	}
+}
+
+.slotMachine-screen {
+	width: 67%;
+	margin: 0 auto 45px;
+	padding: 15px;
+	border: 2px solid #666666;
+	border-radius: 4px;
+	background:  #AAAAAA;
+	box-shadow: 0 0 8px #666666 inset;
+}
+
+.slotMachine-screen-message {
+	font-family: "Open Sans", sans-serif;
+	margin: 0;
+}
+
+/* Slot Windows */
+.slotMachine-slotWindows {
+	flex-basis: 75%;
+}
+.slotMachine-slotWindow {
+	position: relative;
+	overflow: hidden;
+	width:  30%;
+	max-width: 150px;
+	border: 2px solid #444444;
+	border-radius: 4px;
+	background-color: #FFFFFF;
+}
+
+.slotMachine-slotWindow::before {
+	position: relative;
+	z-index: 5;
+	display: block;
+	padding-top: 150%;
+	content: '';
+}
+
+.slotMachine-slotWindow-options {
+	position: absolute;
+	z-index: 1;
+	top: 50%;
+	left: 50%;
+	width: 100%;
+	transition: transform 0.1s linear;
+	transform: rotateZ(90deg);
+	transform-style: preserve-3d;
+}
+
+.slotMachine-slotWindow-option {
+	position: absolute;
+	width: 100%;
+	max-width: 150px;
+	backface-visibility: hidden;
+}
+
+@media screen and (min-width: 480px) {
+	.slotMachine-slotWindow::before {
+		box-shadow: 0px 20px 45px -15px rgba(0,0,0,0.5) inset,
+								0px -20px 45px -15px rgba(0,0,0,0.5) inset;
+	}
+	.slotMachine-slotWindow-option {
+		padding: 10%;
+	}
+}
+
+/* Coin Slot */
+.slotMachine-coinSlotContainer {
+	display: inline-block;
+	padding: 10px 20px;
+	text-align: center;
+	background-color: #C3C3C3;
+	box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+}
+
+.slotMachine-coinSlot {
+	display: inline-block;
+	width: 3px;
+	height: 40px;
+	margin: 10px auto 0;
+	border: 1px solid #222;
+	background-color: #666;
+}
+
+/* Lever */
+.slotMachine-leverContainer {
+	position: relative;
+	width: 20px;
+	height: 50px;
+	border-radius: 5px;
+	background-color: #333333;
+	box-shadow: 0 0 15px 3px #000000 inset;
+}
+
+.slotMachine-lever {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 10px;
+	height: 10px;
+	transform: translate(-50%, -50%) rotate(-60deg);
+	transform-origin: 50% 50%;
+	border-radius: 50%;
+	background-color: #444;
+}
+
+.slotMachine-lever:hover {
+	cursor: pointer;
+}
+
+.slotMachine-lever:hover .slotMachine-lever-handle-knob {
+	box-shadow: 0 0 10px 1px #F1F19B;
+}
+
+.slotMachine-lever-handle {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 80px;
+	height: 10px;
+	transform-origin: 0 50%;
+	border: 1px solid black;
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+	background-color: #000000;
+}
+
+.slotMachine-lever-handle-knob {
+	position: absolute;
+	top: -115%;
+	right: -15%;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background-color: #800000;
+	box-shadow: 4px 0px 8px rgba(0, 0, 0, 0.4) inset;
+}
+
+.animateLever {
+	-webkit-animation: pullLever 0.75s ease-in-out 1;
+		 -moz-animation: pullLever 0.75s ease-in-out 1;
+			 -o-animation: pullLever 0.75s ease-in-out 1;
+					animation: pullLever 0.75s ease-in-out 1;
+}
+.animateLever .slotMachine-lever-handle {
+	-webkit-animation: shrinkLeverHandle 0.75s ease-in-out 1;
+		 -moz-animation: shrinkLeverHandle 0.75s ease-in-out 1;
+			 -o-animation: shrinkLeverHandle 0.75s ease-in-out 1;
+					animation: shrinkLeverHandle 0.75s ease-in-out 1;
+}
+
+@keyframes pullLever {
+	50% {
+		transform: translate(-50%, -50%) rotateZ(60deg) ;
+	}
+}
+
+@keyframes shrinkLeverHandle {
+	25% {
+		transform: scaleX(0.8);
+	}
+	50% {
+		transform: scaleX(1);
+	}
+
+	75% {
+		transform: scaleX(0.8);
+	}
+}
+
+@media screen and (min-width: 480px) {
+	.slotMachine-leverContainer {
+		height: 75px;
+		width: 25px;
+		box-shadow: 0 0 25px 3px #000000 inset;
+	}
+	.slotMachine-lever {
+		width: 12px;
+		height: 12px;
+	}
+	.slotMachine-lever-handle {
+		width: 120px;
+		height: 12px;
+	}
+	.slotMachine-lever-handle-knob {
+		width: 35px;
+		height: 35px;
+	}
+}
+@media screen and (min-width: 768px) {
+	.slotMachine-leverContainer {
+		height: 80px;
+		width: 30px;
+	}
+	.slotMachine-lever {
+		width: 15px;
+		height: 15px;
+	}
+	.slotMachine-lever-handle {
+		width: 150px;
+		height: 15px;
+	}
+	.slotMachine-lever-handle-knob {
+		width: 45px;
+		height: 45px;
+	}
+}
+
+.page-credits {
+	font-family: "Open Sans";
+	font-size: 12px;
+	margin-top: 45px;
+	color: #888888;
+}

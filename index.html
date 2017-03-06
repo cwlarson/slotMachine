@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>The Caffeine Machine</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link href="https://fonts.googleapis.com/css?family=Vast+Shadow|Corben|Open+Sans" rel="stylesheet">
+		<link rel="stylesheet" href="index.css">		<!-- ***** DELETE ***** -->
+	</head>
+	<body class="flex flex-column">
+		<section class="signSection">
+			<div class="container">
+				<div class="sign flex">
+					<div class="sign-bulbColumn flex flex-column flex-justify-spaceBetween">
+						<div class="sign-bulb"></div>
+						<div class="sign-bulb"></div>
+						<div class="sign-bulb"></div>
+						<div class="sign-bulb hidden-lg"></div>
+						<div class="sign-bulb hidden-md hidden-lg"></div>
+					</div>
+					<div class="flex flex-column flex-grow">
+						<div class="sign-bulbRow flex flex-justify-spaceAround">
+							<div class="sign-bulb"></div>
+							<div class="sign-bulb"></div>
+							<div class="sign-bulb"></div>
+							<div class="sign-bulb"></div>
+							<div class="sign-bulb"></div>
+							<div class="sign-bulb"></div>
+							<div class="sign-bulb"></div>
+							<div class="sign-bulb hidden-xs"></div>
+							<div class="sign-bulb hidden-xs"></div>
+							<div class="sign-bulb hidden-xs"></div>
+							<div class="sign-bulb hidden-xs"></div>
+						</div>
+						<div class="sign-titleContainer">
+							<h1 class="sign-title">The Caffeine <br class="visible-xs-block">Machine</h1>
+						</div>
+						<div class="sign-bulbRow flex flex-justify-spaceAround">
+							<div class="sign-bulb"></div>
+							<div class="sign-bulb"></div>
+							<div class="sign-bulb"></div>
+							<div class="sign-bulb"></div>
+							<div class="sign-bulb"></div>
+							<div class="sign-bulb"></div>
+							<div class="sign-bulb"></div>
+							<div class="sign-bulb hidden-xs"></div>
+							<div class="sign-bulb hidden-xs"></div>
+							<div class="sign-bulb hidden-xs"></div>
+							<div class="sign-bulb hidden-xs"></div>
+						</div>
+					</div>
+					<div class="sign-bulbColumn flex flex-column flex-justify-spaceBetween">
+						<div class="sign-bulb"></div>
+						<div class="sign-bulb"></div>
+						<div class="sign-bulb"></div>
+						<div class="sign-bulb hidden-lg"></div>
+						<div class="sign-bulb hidden-md hidden-lg"></div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="slotMachineSection">
+			<div class="container">
+				<div class="slotMachine text-center">
+					<div class="slotMachine-top">
+						<h2 class="slotMachine-title">Spin to Win!</h2>
+					</div>
+					<div class="slotMachine-body">
+						<div class="slotMachine-screen">
+							<p id="js-screenMessage" class="slotMachine-screen-message">
+								Click the lever to spin. 
+								<br class="hidden-xs" />
+								If you get three of a kind, you win!
+							</p>
+						</div>
+						<div class="flex flex-justify-spaceBetween" >
+							<div class="slotMachine-slotWindows flex flex-justify-spaceAround">
+								<div class="slotMachine-slotWindow">
+									<div class="slotMachine-slotWindow-options" data-type="vessel"></div>
+								</div>
+								<div class="slotMachine-slotWindow">
+									<div class="slotMachine-slotWindow-options" data-type="filter"></div>
+								</div>
+								<div class="slotMachine-slotWindow">
+									<div class="slotMachine-slotWindow-options" data-type="grounds"></div>
+								</div>
+							</div>
+							<div class="flex-grow flex flex-column flex-justify-spaceBetween text-center">
+								<div class="flex-grow hidden-xs">
+									<div class="slotMachine-coinSlotContainer">
+										<h4>25&cent;</h4>
+										<div class="slotMachine-coinSlot"></div>
+									</div>
+								</div>
+								<div class="flex-grow flex flex-justify-center flex-align-center">
+									<div class="slotMachine-leverContainer">
+										<div id="js-lever" class="slotMachine-lever">
+											<div class="slotMachine-lever-handle">
+												<div class="slotMachine-lever-handle-knob"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<p class="page-credits">Created by Casey Larson <br> March 2017</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<script src="index.js"></script>		<!-- ***** DELETE ***** -->
+	</body>
+</html>
